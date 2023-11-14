@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IMDB_Browser"
+        xmlns:views="clr-namespace:IMDB_Browser.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <views:FilterView DockPanel.Dock="Left"></views:FilterView>
+        <views:FunctionalityBarView DockPanel.Dock="Top"></views:FunctionalityBarView>
+        <views:MovieListView></views:MovieListView>
+    </DockPanel>
 </Window>

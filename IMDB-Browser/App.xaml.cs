@@ -78,7 +78,7 @@ namespace IMDB_Browser
 
             ImportService importService = new ImportService(context);
 
-            importService.InsertRecords();
+            //importService.InsertRecords();
 
             MainWindow window = new MainWindow();
             window.Show();
