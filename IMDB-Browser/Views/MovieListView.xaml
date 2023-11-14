@@ -7,31 +7,69 @@
              xmlns:system="clr-namespace:System;assembly=System.Runtime"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border>
-        <ListView HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Rectangle Stroke="Black"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
+    <Grid>
+        <Border CornerRadius="15" BorderBrush="Blue" BorderThickness="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
+                <ItemsControl HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Center">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!--Height of Movie is 33% MovieListView and Width is 25% of MovieListView-->
+                            <Rectangle Stroke="Black" Margin="10,10"
+                                       Width="{Binding ElementName=MagicBorder, Path=ActualWidth}"
+                                       Height="{Binding ElementName=MagicBorder, Path=ActualHeight}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
 
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Columns="4" Rows="5"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
 
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-            <system:Object/>
-         
-        </ListView>
-    </Border>
+
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+                    <system:Object/>
+
+                </ItemsControl>
+            </ScrollViewer>
+
+        </Border>
+
+        <Grid Visibility="Hidden" ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="MagicBorder"/>
+        </Grid>
+    </Grid>
+
 </UserControl>

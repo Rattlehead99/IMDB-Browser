@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:IMDB_Browser.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border CornerRadius="15" BorderBrush="Black" BorderThickness="2">
+    <Border CornerRadius="15" BorderBrush="Gray" BorderThickness="2">
         <StackPanel HorizontalAlignment="Center">
             <Rectangle  Width="120" Height="40" Margin="15,10" Stroke="Red"/>
             <Rectangle  Width="120" Height="40" Margin="15,10" Stroke="Black"/>
