@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "IMDB-Browser": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_HOST_FACTORY_RESOLVER_DEFAULT_TIMEOUT_IN_SECONDS": "0"
+      }
+    }
+  }
+}

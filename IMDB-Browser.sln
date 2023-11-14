@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDB-Browser", "IMDB-Browser\IMDB-Browser.csproj", "{1DA07A9F-3ECD-4954-BFF0-9966E0233817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMDB-Browser.Tests", "IMDB-Browser.Tests\IMDB-Browser.Tests.csproj", "{A39B7769-19A4-4E20-8F9A-671204B22BFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DA07A9F-3ECD-4954-BFF0-9966E0233817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA07A9F-3ECD-4954-BFF0-9966E0233817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA07A9F-3ECD-4954-BFF0-9966E0233817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA07A9F-3ECD-4954-BFF0-9966E0233817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39B7769-19A4-4E20-8F9A-671204B22BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39B7769-19A4-4E20-8F9A-671204B22BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39B7769-19A4-4E20-8F9A-671204B22BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39B7769-19A4-4E20-8F9A-671204B22BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A31CD864-1315-47CC-857F-DDBC641FE4C2}
+	EndGlobalSection
+EndGlobal
