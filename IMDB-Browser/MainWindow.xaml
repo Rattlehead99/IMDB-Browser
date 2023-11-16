@@ -6,10 +6,21 @@
         xmlns:local="clr-namespace:IMDB_Browser"
         xmlns:views="clr-namespace:IMDB_Browser.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <views:FilterView DockPanel.Dock="Left"></views:FilterView>
-        <views:FunctionalityBarView DockPanel.Dock="Top"></views:FunctionalityBarView>
-        <views:MovieListView></views:MovieListView>
-    </DockPanel>
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <views:FilterView Grid.RowSpan="2"/>
+        <views:FunctionalityBarView Grid.Row="0" Grid.Column="1"/>
+        <views:MovieListView Grid.Row="1" Grid.Column="1"/>
+    </Grid>
 </Window>

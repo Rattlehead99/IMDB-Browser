@@ -7,11 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Border CornerRadius="15" BorderBrush="Gray" BorderThickness="2">
-        <StackPanel HorizontalAlignment="Center">
-            <Rectangle  Width="120" Height="40" Margin="15,10" Stroke="Red"/>
-            <Rectangle  Width="120" Height="40" Margin="15,10" Stroke="Black"/>
-            <Rectangle  Width="120" Height="40" Margin="15,10" Stroke="Black"/>
-            <Rectangle  Width="120" Height="40" Margin="15,10" Stroke="Black"/>
+        <StackPanel HorizontalAlignment="Stretch">
+            <Rectangle Height="40" Margin="15,10" Stroke="Red"/>
+            <Rectangle Height="40" Margin="15,10" Stroke="Black"/>
+            <Rectangle Height="40" Margin="15,10" Stroke="Black"/>
+            <Rectangle Height="40" Margin="15,10" Stroke="Black"/>
             <Rectangle Stroke="Black" StrokeThickness="1" Stretch="Fill" Margin="15"></Rectangle>
         </StackPanel>
     </Border>
