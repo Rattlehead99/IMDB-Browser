@@ -10,32 +10,42 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border CornerRadius="15" BorderBrush="Blue" BorderThickness="2">
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
-                <ItemsControl HorizontalContentAlignment="Stretch" 
-                              VerticalContentAlignment="Stretch" 
-                              HorizontalAlignment="Center"
-                              ItemsSource="{Binding Movies}">
-                    <ItemsControl.ItemTemplate>
+            <!--<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >-->
+                <ListView ItemsSource="{Binding Movies}">
+
+                <ListView.Resources>
+                    <Style TargetType="ScrollViewer">
+                        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+                    </Style>
+                </ListView.Resources>
+
+                <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="{x:Type viewModels:MovieViewModel}">
                             <!--Height of Movie is 33% MovieListView and Width is 25% of MovieListView-->
-                            <Grid Margin="10,10"
-                                Width="{Binding ElementName=MovieHeightBorder, Path=ActualHeight}"
-                                Height="{Binding ElementName=MovieWidthBorder, Path=ActualHeight}">
-                            
-                            <Image Source="{Binding Image}" Stretch="Uniform"/>
-                            <Rectangle Stroke="Red"/>
-                            </Grid>
+                            <StackPanel>
+                                <Image Source="{Binding Image}" Stretch="Uniform"
+                                       Margin="10,10"
+                                       Width="{Binding ElementName=MovieHeightBorder, Path=ActualHeight}"
+                                       Height="{Binding ElementName=MovieWidthBorder, Path=ActualHeight}"/>
+                                <WrapPanel>
+                                    <TextBlock Text="{Binding PrimaryTitle}" Margin="5,0"/>
+                                    <TextBlock Text="{Binding Genres}" Margin="5,0"/>
+                                    <TextBlock Text="{Binding StartYear}" Margin="5,0"/>
+                                    <TextBlock Text="{Binding StartYear}" Margin="5,0"/>
+                                </WrapPanel>
+                            <!--<Rectangle Stroke="Red"/>-->
+                            </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
 
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel Orientation="Horizontal"/>
+                            <WrapPanel HorizontalAlignment="Center" Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
 
-                </ItemsControl>
-            </ScrollViewer>
+                </ListView>
+            <!--</ScrollViewer>-->
 
         </Border>
 
