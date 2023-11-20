@@ -43,6 +43,10 @@ namespace IMDB_Browser.ViewModels.Services
             
         }
 
+        public void GetFirstMovie()
+        {
+            var movie = _dbContext.Movies.FirstOrDefault();
+        }
         //
     }
 }

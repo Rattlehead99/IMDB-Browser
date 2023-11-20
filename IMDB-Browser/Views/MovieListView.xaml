@@ -5,18 +5,26 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:IMDB_Browser.Views"
              xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             xmlns:viewModels="clr-namespace:IMDB_Browser.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border CornerRadius="15" BorderBrush="Blue" BorderThickness="2">
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" >
-                <ItemsControl HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Center">
+                <ItemsControl HorizontalContentAlignment="Stretch" 
+                              VerticalContentAlignment="Stretch" 
+                              HorizontalAlignment="Center"
+                              ItemsSource="{Binding Movies}">
                     <ItemsControl.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate DataType="{x:Type viewModels:MovieViewModel}">
                             <!--Height of Movie is 33% MovieListView and Width is 25% of MovieListView-->
-                            <Rectangle Stroke="Black" Margin="10,10"
-                                       Width="{Binding ElementName=MagicBorder, Path=ActualWidth}"
-                                       Height="{Binding ElementName=MagicBorder, Path=ActualHeight}"/>
+                            <Grid Margin="10,10"
+                                Width="{Binding ElementName=MagicBorder, Path=ActualWidth}"
+                                Height="{Binding ElementName=MagicBorder, Path=ActualHeight}">
+                            
+                            <Image Source="{Binding Image}" Stretch="None"/>
+                            <Rectangle Stroke="Red"/>
+                            </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
 
@@ -26,6 +34,7 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
 
+                    <!--<system:Object/>
                     <system:Object/>
                     <system:Object/>
                     <system:Object/>
@@ -50,8 +59,7 @@
                     <system:Object/>
                     <system:Object/>
                     <system:Object/>
-                    <system:Object/>
-                    <system:Object/>
+                    <system:Object/>-->
 
                 </ItemsControl>
             </ScrollViewer>

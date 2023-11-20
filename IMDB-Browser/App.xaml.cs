@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using IMDB_Browser.Models;
+using IMDB_Browser.ViewModels;
 using IMDB_Browser.ViewModels.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -81,6 +82,7 @@ namespace IMDB_Browser
             //importService.InsertRecords();
 
             MainWindow window = new MainWindow();
+            window.DataContext = new MovieListViewModel();
             window.Show();
 
 

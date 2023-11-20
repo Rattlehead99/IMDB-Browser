@@ -31,10 +31,8 @@ public class RecordLoader : IDisposable
     }
     public IEnumerable<T> LoadRecords<T>()
     {
-        
-
         IEnumerable<T> records = _csv.GetRecords<T>();
-
+        
         return records;
     }
 
