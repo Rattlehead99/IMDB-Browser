@@ -35,6 +35,13 @@ namespace IMDB_Browser.ViewModels
                 MovieViewModel,
                 MovieViewModel,
                 MovieViewModel,
+                MovieViewModel,
+                MovieViewModel,
+                MovieViewModel,
+                MovieViewModel,
+                MovieViewModel,
+                MovieViewModel,
+                MovieViewModel,
             };
         }
 

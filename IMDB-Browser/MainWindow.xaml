@@ -13,16 +13,17 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="14*"/>
         </Grid.RowDefinitions>
 
         <views:FilterView Grid.RowSpan="2"/>
         <views:FunctionalityBarView Grid.Row="0" Grid.Column="1"/>
         <views:MovieListView Grid.Row="1" Grid.Column="1"/>
+
     </Grid>
 </Window>
