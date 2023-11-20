@@ -21,7 +21,7 @@ namespace IMDB_Browser.ViewModels
             EndYear = 2008,
             RunTimeMinutes = 100,
             Genres = "Action",
-            Image = new BitmapImage(new Uri("http://www.impawards.com/tv/posters/boys_ver41.jpg"))
+            //Image = new BitmapImage(new Uri("http://www.impawards.com/tv/posters/boys_ver41.jpg"))
         };
         public MovieListViewModel()
         {

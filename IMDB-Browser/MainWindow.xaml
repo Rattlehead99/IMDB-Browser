@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:IMDB_Browser"
         xmlns:views="clr-namespace:IMDB_Browser.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow"
+        MinWidth="1000" MinHeight="700"
+        WindowState="Maximized">
     <Grid>
 
         <Grid.ColumnDefinitions>

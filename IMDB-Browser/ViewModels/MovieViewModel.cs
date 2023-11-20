@@ -20,6 +20,7 @@ namespace IMDB_Browser.ViewModels
         private int? _runTimeMinutes;
         private string? _genres;
         private string? _titleType;
+        private BitmapImage _imageSource;
 
         public MovieViewModel()
         {
@@ -30,9 +31,10 @@ namespace IMDB_Browser.ViewModels
             EndYear = 2008;
             RunTimeMinutes = 100;
             Genres = "Action";
+            _imageSource = new BitmapImage(new Uri("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"));
         }
 
-        public ImageSource Image { get; set; } = new BitmapImage(new Uri("http://www.impawards.com/tv/posters/boys_ver41.jpg"));
+        public ImageSource Image => _imageSource;
 
         public string? TitleType
         {
