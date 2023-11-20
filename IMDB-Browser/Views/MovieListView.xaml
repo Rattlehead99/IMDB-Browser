@@ -19,47 +19,20 @@
                     </Style>
                 </ListView.Resources>
 
+                <!--Width="{Binding ElementName=MovieHeightBorder, Path=ActualHeight}"
+                Height="{Binding ElementName=MovieWidthBorder, Path=ActualHeight}"-->
+
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="{x:Type viewModels:MovieViewModel}">
                         <!--Height of Movie is 50% MovieListView and Width is 25% of MovieListView-->
-                        <DockPanel
-                                    Width="{Binding ElementName=MovieHeightBorder, Path=ActualHeight}"
-                                    Height="{Binding ElementName=MovieWidthBorder, Path=ActualHeight}"
-                                    RenderTransformOrigin="0.5, 0.5">
-                            <FrameworkElement.RenderTransform>
-                                <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
-                            </FrameworkElement.RenderTransform>
 
-                            <UniformGrid DockPanel.Dock="Bottom"
-                                         Height="75" 
-                                         Width="{Binding ElementName= MovieImage, Path=ActualWidth}"
-                                         Background="Red" 
-                                         HorizontalAlignment="Center">
+                        <FrameworkElement.RenderTransform>
+                            <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                        </FrameworkElement.RenderTransform>
 
-                                <StackPanel Orientation="Horizontal" Background="Green">
-                                    <Label Content="Title: " VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding PrimaryTitle}" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Label Content="Genres: " VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding Genres}" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Label Content="Year: " VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding StartYear}" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Label Content="Rating: " VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding Genres}" VerticalAlignment="Center"/>
-                                </StackPanel>
-                            </UniformGrid>
-
-                            <Image Source="{Binding Image}" 
-                                       Stretch="Uniform" 
-                                       HorizontalAlignment="Center"
-                                       Name="MovieImage"/>
-
-                        </DockPanel>
+                        <local:MovieView Width="{Binding ElementName=MovieHeightBorder, Path=ActualHeight}"
+                                         Height="{Binding ElementName=MovieWidthBorder, Path=ActualHeight}"
+                                         RenderTransformOrigin="0.5, 0.5"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
 
